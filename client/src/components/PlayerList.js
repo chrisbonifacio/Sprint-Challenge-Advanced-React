@@ -26,7 +26,7 @@ export default class PlayerList extends React.Component {
     return (
       <div className="player-list">
         {this.state.players.map(player => {
-          return <PlayerCard player={player} />;
+          return <PlayerCard key={player.id} player={player} />;
         })}
       </div>
     );
