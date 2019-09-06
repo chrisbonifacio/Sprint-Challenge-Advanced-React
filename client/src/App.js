@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.scss";
 
-function App() {
+import PlayerList from "./components/PlayerList";
+import DarkModeButton from "./components/DarkModeButton";
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Women's World Cup</h1>
+      <p>Ranked by search interest from Google Trends</p>
+      <DarkModeButton />
+      <PlayerList />
     </div>
   );
-}
+};
 
 export default App;
