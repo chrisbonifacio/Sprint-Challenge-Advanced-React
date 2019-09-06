@@ -1,31 +1,16 @@
 import React from "react";
 import "./App.scss";
 
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      players: []
-    };
-  }
+import PlayerList from "./components/PlayerList";
+import DarkModeButton from "./components/DarkModeButton";
 
-  componentDidMount() {
-    fetch("http://localhost:5000/api/players")
-      .then(res => {
-        return res.json();
-      })
-      .then(data => {
-        this.setState({ players: data });
-        console.log(this.state.players);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }
-
-  render() {
-    return <div className="App">{}</div>;
-  }
-}
+const App = () => {
+  return (
+    <div className="App">
+      <DarkModeButton />
+      <PlayerList />
+    </div>
+  );
+};
 
 export default App;
