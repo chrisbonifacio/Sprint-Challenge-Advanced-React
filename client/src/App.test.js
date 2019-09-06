@@ -16,3 +16,13 @@ test("PlayerCards are displaying player names", async () => {
   const { findByTestId } = await render(<App />);
   findByTestId("player-name");
 });
+
+test("PlayerCards are displaying player ranks", async () => {
+  const { findByTestId } = await render(<App />);
+  findByTestId("player-rank");
+});
+
+test("PlayerCards are displaying player countries", async () => {
+  const { findByTestId } = await render(<App />);
+  findByTestId("player-country");
+});
