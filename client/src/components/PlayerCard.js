@@ -3,7 +3,7 @@ import React from "react";
 export default function PlayerCard(props) {
   return (
     <div className="player-card-wrapper">
-      <div className="player-card">
+      <div data-testid="player-card" className="player-card">
         <h2 className="player-name">{props.player.name}</h2>
         <p
           className="player-country"
